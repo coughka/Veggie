@@ -1,0 +1,567 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,400,700');
+@import url("../fonts/webfonts/fontawesome-all.css");
+
+
+body {
+    font-family: 'Merriweather', serif;
+    font-weight: 300;
+    color:rgba(60,60,60,1);
+}
+
+section {
+    margin-bottom:5vh;
+}
+
+
+/*FONT_SIZE*/
+
+h1, h2, h3, h4 {
+  margin: 0;
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.998em;
+}
+
+h2 {font-size: 2.827rem;}
+
+h3 {
+    font-size: 1.999em;
+    text-transform: uppercase;
+}
+
+h4 {font-size: 1rem;
+font-weight:bold;}
+
+h5 {
+    text-transform:uppercase;
+}
+
+small, .font_small {font-size: 0.707em;}
+
+
+
+header {
+    background-image:url("../images/header_decorative-pumpkins.png");
+    background-size:auto 100%;
+    background-repeat:no-repeat;
+    
+}
+
+.header-content {
+    display: grid;
+    width:95%;
+    grid-template-columns:repeat(12,1fr);
+    grid-template-rows:10vh 1fr;
+    margin:0 auto;
+    height:100vh;
+}
+
+.menu {
+    justify-self: end;
+    grid-column:7/span 6;
+    margin:1rem 0;
+
+}
+
+.menu a {
+    text-decoration: none;
+    color:rgba(60,60,60,1);
+    padding:0.5rem 1rem;
+    border: 1px solid white;
+}
+
+.menu a:hover {
+    border: 1px solid rgba(60,60,60,1);
+    padding:0.5rem 1rem;
+}
+
+.section-title {
+    align-self:center;
+    grid-column:7/span 6;
+    text-align:center;
+    width:95%;
+    margin:5vh auto;
+}
+
+.columns {
+    background-color:rgba(247,199,16,1);
+}
+
+.columns-content {
+    display:grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-gap:2rem;
+    align-items:center;
+    width:85%;
+    margin:0 auto;
+    height:45vh;
+    
+}
+
+.columns-item {
+    grid-column:span 4;
+    text-align:center;
+    margin:5vh 0;   
+}
+
+.columns-item img {
+    margin:1rem 0;    
+}
+
+.specials-content {
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
+    width:80%;
+    margin:0 auto;
+}
+
+.specials-card {
+    
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card-description{
+    background-color:rgba(248,248,248,1);
+    display:grid;
+    align-items:center;
+    justify-items: center;
+    text-align: center;
+}
+
+.card-description-content {
+    display:grid;
+    justify-items:center;
+}
+
+.card-description-content p {
+    margin:0.25rem 0.5rem;
+}
+
+.card-picture img {
+    width:100%;
+}
+
+.divider {
+    width:50%;
+    height:2px;
+    background-color:rgba(60,60,60,1);
+    margin:0.5rem 0;
+}
+
+.price {
+    font-weight:700;
+}
+
+
+.specials-card:nth-child(4) .card-description, .specials-card:nth-child(6) .card-description, .specials-card:nth-child(5) .card-description {
+    grid-row:1;
+    grid-column:1;
+}
+
+.about-us {
+    background-image:url("../images/SW_AndrewParrish.png");
+    background-size:auto 100%;
+    background-repeat:no-repeat;
+    background-position:right;
+    height:100vh;
+    display:grid;
+    align-items: center;
+}
+
+.about-us-content {
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    
+}
+
+.about-us-content .section-title {
+    grid-column:1;
+}
+
+.about-us-txt {
+    grid-column:1;
+}
+
+.about-us-txt p {
+    margin:0;
+}
+
+.about-us-txt {
+    font-size:1.414rem;
+    width:75%;
+    margin:0 auto;
+    text-align: center;
+}
+
+.signature {
+    margin:1rem 0;
+    position:relative;
+    left:10rem;
+}
+
+/* DiSH LIST */
+
+.dish-list-starters {
+    columns:2;
+}
+
+ul {
+    padding:0;
+}
+
+ul li {
+    list-style:none;
+    margin:1rem 0;
+}
+
+.dish-list-content {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+}
+
+.dish-list-content .section-title, .dish-list-content .menu {
+    grid-column:span 2;
+}
+
+.dish-and-price {
+    display:grid;
+    grid-template-columns:auto 1fr auto;
+}
+
+.hor-divider {
+    height:1rem;
+    border-bottom:dotted 1px rgba(60,60,60,1);
+}
+
+/* slider */
+
+.slider {
+    width:85%;
+    margin:0 auto;
+    overflow: hidden;
+    grid-column:span 2;
+  }
+
+  .slider .menu {
+        text-align:center;
+        margin-bottom:5vh;
+  }
+
+
+  
+  .slides {
+    display: flex;
+    margin:10vh auto;
+    overflow-x: auto;
+    width:75vw;
+    border-radius: 5px;
+    
+    scroll-behavior: smooth;
+    
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-points-x: repeat(300px);
+    scroll-snap-type: mandatory;
+  }
+  .slides::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  .slides::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+  }
+  .slides::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .slides > div {
+    flex-shrink: 0;
+    width:75vw;
+    
+    border-radius: 10px;
+    position: relative;
+    
+    columns:2;
+    margin:0 auto;
+    
+  }
+
+  
+  .slider > a {
+    display: inline-flex;
+    background: white;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 0.5rem;
+    position: relative;
+  }
+
+  /*FORM*/
+
+.contacts {
+    background-image:url("../images/background-footer.png");
+    background-size:50% 100%;
+    background-repeat:no-repeat;
+    background-color:rgba(60,60,60,0.1);
+
+    
+}
+
+.contacts-content {
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    width:95%;
+    margin:0 auto;
+    
+    
+}
+
+.address {
+    grid-column:7/span 6;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-gap:1rem;
+    margin:0 5vh;  
+}
+
+.veggie {
+    grid-column:1;
+}
+
+.reservations {
+    grid-column:2;
+}
+
+  .contacts-form {
+    grid-column:7/span 6;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:1rem;
+    margin:5vh;  
+    
+  }
+
+  input, textarea {
+      padding:0.5rem 1rem;
+      width:auto;
+      border:0;
+      border-bottom:1px solid rgba(60,60,60,1);
+      background-color:rgba(248,248,248,0.1);
+  }
+
+  input[type = "text"]  {
+      grid-column:1
+  }
+
+  input[type = "email"] {
+      grid-column:2;
+  }
+
+  textarea, input[type = "submit"] {
+      grid-column:span 2;
+  }
+
+  input[type = "submit"] {
+      justify-self:center;
+      border:1px solid rgba(60,60,60,1);
+      cursor: pointer;
+  }
+
+  input[type = "submit"]:hover {
+      background-color:rgba(60,60,60,1);
+      color:white;
+  }
+
+  textarea {
+      height:15vh;
+      width:95%;
+      margin:0 auto;
+      
+  }
+
+.footer-content {
+    display:grid;
+    height:15vh;
+    align-items:center;
+    justify-items:end;
+    width:95%;
+    margin:0 auto;
+}
+
+.social-bar i {
+   
+    font-size:1.414rem;
+    border:1px solid rgba(60,60,60,1);
+    padding:1rem;
+    margin:0.5rem;
+}
+
+i.fa-facebook-f {
+    padding:1rem 1.3rem;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+    .header-content, .about-us, .contact-us, .columns-content {
+        height:auto;
+    }
+
+    .section-title {
+        align-self:start;
+    }
+
+    header {
+        background-image:contain;
+    }
+
+    .signature {
+        left:0;
+    }
+
+    input[type = "text"], input[type = "email"]  {
+        grid-column:span 2;
+    }
+
+    .specials-card:nth-child(3) .card-description {
+        grid-row:1;
+        grid-column:1;
+    }
+
+    .specials-card:nth-child(5) .card-description, .specials-card:nth-child(6) .card-description {
+        grid-row:1;
+        grid-column:2;
+    }
+
+    .about-us {
+        background-size:60%;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .vegie, .reservations {
+        grid-column:span 2;
+        justify-self:center;
+    }
+
+    .specials-card:nth-child(2) .card-description, .specials-card:nth-child(4) .card-description, .specials-card:nth-child(6) .card-description {
+        grid-row:1;
+        grid-column:1;
+    }
+
+    .specials-card:nth-child(3) .card-description {
+        grid-row:1;
+        grid-column:2;
+    }
+
+    .header-content .menu a:first-child {
+        display:none;
+    }
+
+
+}
+
+
+  @media screen and (max-width: 425px) {
+    .header-content .menu, .section-title, .columns-item {
+        grid-column:span 12;
+        justify-self: center;
+    }
+
+    .columns-content {
+        grid-gap:0;
+        padding:2.5vh 0;
+
+    }
+
+    .columns-item {
+        margin:0;
+    }
+
+    .header-content .menu a:nth-child(1) {
+        display: none;
+        
+    }
+
+    .menu a {
+        padding:0.25rem 0.5rem;
+    }
+
+    .slides > div {
+        columns:1;
+        width:95vw;
+    }
+
+    .slides {
+        width:95vw;
+        margin:5vh 0;
+    }
+
+    .specials-card:nth-child(2) .card-description {
+        grid-row:1;
+        grid-column:1;
+    }
+
+    .specials-card:nth-child(5) .card-description {
+        grid-row:1;
+        grid-column:2;
+    }
+
+    .about-us .section-title, .about-us .about-us-txt {
+        grid-column:span 2;
+    }
+
+    .about-us, header {
+        background-image:none;
+    }
+    .slider {
+        width:95%;
+    }
+
+    input[type = "text"], input[type = "email"]  {
+        grid-column:span 2
+    }
+
+    .address, .contacts-form {
+        grid-column:span 12;
+        margin:2.5vh;
+    }
+
+    .footer-content {
+        justify-items:center;
+    }
+
+    .vegie {
+        grid-column:1;
+    }
+
+    .reservations {
+        grid-column:2;
+    }
+
+    .contacts {
+        background-image:none;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .menu a {
+        padding:0.12rem 0.25rem;
+    }
+}
+
+
+
